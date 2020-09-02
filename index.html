@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzererfassung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Benutzererfassung</h1>
+    <form action="post">
+        <input name="vname" type="text" placeholder="Vorname" required>
+        <input name="nname" type="text" placeholder="Nachname" required>
+        <br>
+        <input name="street" type="text" placeholder="Strasse" required>
+        <input name="streetnr" type="tel" placeholder="Nr. (opt.)" pattern="\d{4}">
+        <br>
+        <input name="plz" type="tel" placeholder="PLZ" pattern="\d{4}" required>
+        <input name="place" type="text" placeholder="Ort" required>
+        <br>
+        <input name="age" type="tel" placeholder="Alter (opt.)" pattern="\d*">
+        <input name="email" type="email" placeholder="Email-Adresse" required>
+        <br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
