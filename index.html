@@ -11,19 +11,25 @@
 <body>
     <h1>Benutzererfassung</h1>
     <form action="post">
-        <input name="vname" type="text" placeholder="Vorname" required>
-        <input name="nname" type="text" placeholder="Nachname" required>
+        <input name="vname" class="half" type="text" placeholder="Vorname" required>
+        <input name="nname" class="half" type="text" placeholder="Nachname" required>
         <br>
-        <input name="street" type="text" placeholder="Strasse" required>
-        <input name="streetnr" type="tel" placeholder="Nr. (opt.)" pattern="\d{4}">
+        <input name="street" class="wide" type="text" placeholder="Strasse" required>
+        <input name="streetnr" class="narrow" type="tel" placeholder="Nr. (opt.)" pattern="\d*">
         <br>
-        <input name="plz" type="tel" placeholder="PLZ" pattern="\d{4}" required>
-        <input name="place" type="text" placeholder="Ort" required>
+        <input name="plz" class="narrow" type="tel" placeholder="PLZ" pattern="\d{4}" required>
+        <input class="wide" list="places" placeholder="Ort" required>
+        <datalist id="places">
+            <option value="Ort1">
+            <option value="Ort2">
+            <option value="Ort3">
+            <option value="Ort4">
+        </datalist>
         <br>
-        <input name="age" type="tel" placeholder="Alter (opt.)" pattern="\d*">
-        <input name="email" type="email" placeholder="Email-Adresse" required>
+        <input name="age" class="narrow" type="tel" placeholder="Alter (opt.)" pattern="\d*">
+        <input name="email" class="wide" type="email" placeholder="Email-Adresse" required>
         <br>
-        <input type="reset">
-        <input type="submit">
+        <input class="narrow button" type="reset" value="Reset">
+        <input class="narrow button" type="submit" value="Send">
     </form>
 </body>
